@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result | Vitamin Vision</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <img class="logo" src="{{ url_for('static', filename='assets/logo.png') }}" alt="Vitamin Vision Logo">
+    <h1>Prediction Result</h1>
+    <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Image">
+    <p><b>Predicted Vitamin:</b> {{ predicted }}</p>
+    <p><b>Confidence:</b> {{ probability }}</p>
+    <a href="/predict">Try Another</a>
+  </div>
+</body>
+</html>
